@@ -4,7 +4,7 @@ Saumya Diwan
 Email: saumya.diwan@emory.edu
 Question Number 3: Model-based Bias Removal in Machine Learning using Synthetic Blood Pressure Data
 
-**Disclaimer:** *ChatGPT 5.1* was used to complete **HW3 [A ii]** to identify the library and function used for general curve fitting, its syntax, generating initial parameter estimates, and checking convergence and in **HW 3 [Bi]** to outline the steps used to generate data when given the mean, standard deviation, and correlation of variables.
+**Disclaimer:** **ChatGPT 5.1** was used to complete **HW3 [A ii]** to identify the library and function used for general curve fitting, its syntax, generating initial parameter estimates, and checking convergence and in **HW 3 [Bi]** to outline the steps used to generate data when given the mean, standard deviation, and correlation of variables.
 
 # Key Insights
 ## A 
