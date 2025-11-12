@@ -1,4 +1,4 @@
-# HW-11-Homework-BMI-
+# BMI HW 11-Saumya Diwan
 Model Based Machine Learning
 
 Disclaimer: [ChatGPT 5.1] was used to complete
