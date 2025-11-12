@@ -13,6 +13,32 @@ i:
 - Synthetic Data Generated for Systolic Blood Pressure colored by Male and Female labels ([HW-11-Homework-BMI-/Synthetic SBP data generated.png](https://github.com/SaumyaDiwan-bmi/HW-11-Homework-BMI-/blob/main/Synthetic%20SBP%20data%20generated.png)) 
 - Synthetic Data Generated for Diastolic Blood Pressure colored by Male and Female labels ([HW-11-Homework-BMI-/Synthetic DBP data generated.png](https://github.com/SaumyaDiwan-bmi/HW-11-Homework-BMI-/blob/main/Synthetic%20DBP%20data%20generated.png))
 - Note: The mean SBP is centered around 130 mmHg and mean DBP is centered around 75 mmHg
+ii:
+-Data was split into training (80%) and testing (20%)
+-Initially experimentation was done with and without stratification based on sex while data was split to note if there is affect in performance ().
+Without Stratification 
+Accuracy: 0.58675
+F1 Score: 0.5860255447032306
+ROC AUC: 0.6226216703024212
+Confusion Matrix:
+[[5885 4193]
+ [4072 5850]]
+With Stratification
+Accuracy: 0.58085
+F1 Score: 0.582956071837222
+ROC AUC: 0.61275949
+Confusion Matrix:
+[[5758 4242]
+ [4141 5859]]
+| Metric               | **Without Stratification**       | **With Stratification**          |
+| -------------------- | -------------------------------- | -------------------------------- |
+| **Accuracy**         | 0.58675                          | 0.58085                          |
+| **F1 Score**         | 0.58603                          | 0.58296                          |
+| **ROC AUC**          | 0.62262                          | 0.61276                          |
+| **Confusion Matrix** | [[5885, 4193],<br> [4072, 5850]] | [[5758, 4242],<br> [4141, 5859]] |
+
+
+-Only a marginal drop in AUC was noted 
 
 
 
