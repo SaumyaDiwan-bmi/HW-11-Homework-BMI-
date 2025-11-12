@@ -16,20 +16,8 @@ i:
 ii:
 -Data was split into training (80%) and testing (20%)
 -Initially experimentation was done with and without stratification based on sex while data was split to note if there is affect in performance ().
-Without Stratification 
-Accuracy: 0.58675
-F1 Score: 0.5860255447032306
-ROC AUC: 0.6226216703024212
-Confusion Matrix:
-[[5885 4193]
- [4072 5850]]
-With Stratification
-Accuracy: 0.58085
-F1 Score: 0.582956071837222
-ROC AUC: 0.61275949
-Confusion Matrix:
-[[5758 4242]
- [4141 5859]]
+
+
 | Metric               | **Without Stratification**       | **With Stratification**          |
 | -------------------- | -------------------------------- | -------------------------------- |
 | **Accuracy**         | 0.58675                          | 0.58085                          |
