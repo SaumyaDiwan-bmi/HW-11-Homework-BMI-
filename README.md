@@ -8,6 +8,8 @@ Model Based Machine Learning
 
 # Key Insights
 ## A 
+### ii 
+Data from the reference preprint ([https://arxiv.org/pdf/2402.01598]) was taken class marks for the Age brackets were generated in a separate column (Age_class_mark))
 | Age   | Number    | %    | mean_SBP | std_SBP | mean_DBP | std_DBP | rho_SBP_DBP | Age_class_mark |
 | ----- | --------- | ---- | -------- | ------- | -------- | ------- | ----------- | -------------- |
 | <20   | 193631    | 3.6  | 115.05   | 13.65   | 69.80    | 8.90    | 0.61        | 10.0           |
@@ -20,7 +22,29 @@ Model Based Machine Learning
 | 80–89 | 305,157   | 5.7  | 136.89   | 18.35   | 71.56    | 9.22    | 0.49        | 84.5           |
 | ≥90   | 60,637    | 1.1  | 138.11   | 19.59   | 69.86    | 9.44    | 0.50        | 95.0           |
 
-###
+### iii
+Quantitative Evaluation of Model Fit: The Mean Squared Error (MSE) and R-squared (R^2) metrics were computed and are displayed in the table below. The model curves for SBP and DBP can be found here ([https://github.com/SaumyaDiwan-bmi/HW-11-Homework-BMI-/blob/main/SBP_DBP_model_comparision.png])
+
+| Model          | MSE      | R²       |
+| -------------- | -------- | -------- |
+| Polynomial SBP | 0.065030 | 0.998764 |
+| Polynomial DBP | 0.897586 | 0.926137 |
+| Sigmoid SBP    | 0.065419 | 0.998757 |
+| Gaussian DBP   | 0.800747 | 0.934106 |
+### iv
+Interpretation of Model Parameters: 
+For the polynomial model, 
+-c1 and d1 (curvature coefficients) reflect the rate of change of slope with age (Physical dimension:mmHg/year^2). Both neagtive with 
+-c2 and d2 (linear coefficients) reflect the linear change of slope with age (Physical dimension:mmHg/year)
+-c3 and d3 (intercept terms) reflect the baseline BP at age = 0 (Physical dimension:mmHg) 
+For the sigmoidal-Gaussian model
+–Smax reflects the Maximum Systolic Blood Pressure which would be the upper plateau (Physical dimension:mmHg/year^2)
+–a0: reflects the age at which SBP reaches half-maximum.(Physical dimension: year)
+–Dmax reflects the maximum Diastolic Blood Pressure around middle age.(Physical dimension:mmHg)
+–apeak reflects the age of peak DBP.(Physical dimension: year)
+–σ reflects the spread of the Gaussian curve for DBP.(Physical dimension:year)
+The Coefficient Values are displayed in the Table below for the polynomial, sigmoid and gaussian model functions. 
+
 | Coefficient | Value      |
 | ----------- | ---------- |
 | **c1**      | -0.001532  |
@@ -36,13 +60,12 @@ Model Based Machine Learning
 | **apeak**   | 50.569448  |
 | **sigma**   | 85.573570  |
 
-([https://github.com/SaumyaDiwan-bmi/HW-11-Homework-BMI-/blob/main/SBP_DBP_model_comparision.png])
-| Model          | MSE      | R²       |
-| -------------- | -------- | -------- |
-| Polynomial SBP | 0.065030 | 0.998764 |
-| Polynomial DBP | 0.897586 | 0.926137 |
-| Sigmoid SBP    | 0.065419 | 0.998757 |
-| Gaussian DBP   | 0.800747 | 0.934106 |
+### v 
+Discussion and Analysis 
+i. Which model captures age trends in SBP and DBP better? 
+ii. How do model parameters reflect physiological blood pressure changes with age?
+iii. Discuss limitations in capturing demographic nuances.
+
 
 ## B
 ### i:
