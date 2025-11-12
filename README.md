@@ -10,8 +10,9 @@ Model Based Machine Learning
 ## A 
 ## B
 i:
-- Synthetic Data Generated for Systolic Blood Pressure ![Plot] ([HW-11-Homework-BMI-/Synthetic SBP data generated.png](https://github.com/SaumyaDiwan-bmi/HW-11-Homework-BMI-/blob/main/Synthetic%20SBP%20data%20generated.png))
-- Synthetic Data Generated for Diastolic Blood Pressure ![Plot] ([HW-11-Homework-BMI-/Synthetic DBP data generated.png](https://github.com/SaumyaDiwan-bmi/HW-11-Homework-BMI-/blob/main/Synthetic%20DBP%20data%20generated.png))
+- Synthetic Data Generated for Systolic Blood Pressure colored by Male and Female labels ([HW-11-Homework-BMI-/Synthetic SBP data generated.png](https://github.com/SaumyaDiwan-bmi/HW-11-Homework-BMI-/blob/main/Synthetic%20SBP%20data%20generated.png)) 
+- Synthetic Data Generated for Diastolic Blood Pressure colored by Male and Female labels ([HW-11-Homework-BMI-/Synthetic DBP data generated.png](https://github.com/SaumyaDiwan-bmi/HW-11-Homework-BMI-/blob/main/Synthetic%20DBP%20data%20generated.png))
+- Note: The mean SBP is centered around 130 mmHg and mean DBP is centered around 75 mmHg
 
 
 
