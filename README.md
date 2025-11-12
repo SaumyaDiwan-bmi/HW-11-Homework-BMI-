@@ -8,6 +8,10 @@ Model Based Machine Learning
 
 # Key Insights
 ## A 
+## B
+i:
+- Synthetic Data Generated for Systolic Blood Pressure ![Plot] (Synthetic SBP data generated.png)
+- Synthetic Data Generated for Diastolic Blood Pressure ![Plot] (Synthetic DBP data generated.png)
 
 
 
