@@ -10,8 +10,8 @@ Model Based Machine Learning
 ## A 
 ## B
 i:
-- Synthetic Data Generated for Systolic Blood Pressure ![Plot] (Synthetic SBP data generated.png)
-- Synthetic Data Generated for Diastolic Blood Pressure ![Plot] (Synthetic DBP data generated.png)
+- Synthetic Data Generated for Systolic Blood Pressure ![Plot] (HW-11-Homework-BMI-/Synthetic SBP data generated.png)
+- Synthetic Data Generated for Diastolic Blood Pressure ![Plot] (HW-11-Homework-BMI-/Synthetic DBP data generated.png)
 
 
 
