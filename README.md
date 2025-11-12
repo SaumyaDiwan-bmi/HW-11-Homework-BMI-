@@ -15,7 +15,7 @@ i:
 - Note: The mean SBP is centered around 130 mmHg and mean DBP is centered around 75 mmHg
 ii:
 -Data was split into training (80%) and testing (20%)
--Initially experimentation was done with (https://github.com/SaumyaDiwan-bmi/HW-11-Homework-BMI-/blob/main/ROC%20curve%20initial%20with%20sex%20stratification.png) and without (https://github.com/SaumyaDiwan-bmi/HW-11-Homework-BMI-/blob/main/ROC%20curve%20initial%20without%20sex%20stratification.png )stratification based on sex while data was split to note if there is affect in performance ().
+-Initially experimentation was done with (https://github.com/SaumyaDiwan-bmi/HW-11-Homework-BMI-/blob/main/ROC%20curve%20initial%20with%20sex%20stratification.png) and without (https://github.com/SaumyaDiwan-bmi/HW-11-Homework-BMI-/blob/main/ROC%20curve%20initial%20without%20sex%20stratification.png ) stratification based on sex while data was split to note if there is affect in performance
 
 | Metric               | **Without Stratification**       | **With Stratification**          |
 | -------------------- | -------------------------------- | -------------------------------- |
@@ -25,7 +25,8 @@ ii:
 | **Confusion Matrix** | [[5885, 4193],<br> [4072, 5850]] | [[5758, 4242],<br> [4141, 5859]] |
 
 
--Only a marginal drop in AUC was noted 
+-Only a marginal drop (in all metrics was noted)
+- 
 
 
 
