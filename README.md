@@ -65,8 +65,8 @@ Discussion and Analysis
 i. Which model captures age trends in SBP and DBP better? 
 For SBP, both Polynomial and Sigmoid models perform extremely well MSE = 0.065030,0.065419 , and R^2 = 0.998764,0.998757 respectively. The polynomical model performing seems to perform slightly better. Physiologcially sigmoid makes more sense as it shows slight curvature and which leads to a plateau, which is what is noted in SBP trends where it intially increases but stabilizes in adults. For DBP, both Polynomial and Gaussian models perform extremely well MSE = 0.897586,0.800747 , and R^2 = 0.926137,0.934106 respectively. The Gaussian model performing seems to perform better. This shows that a gaussian distribution suits DBP trends more where it first increases till around around the 55 years of age and then decrease after as one ages further
 
-ii. How do model parameters reflect physiological blood pressure changes with age?
-Physiological Interpretation of Model Parameters: 
+- ii. How do model parameters reflect physiological blood pressure changes with age?
+- Physiological Interpretation of Model Parameters: 
 - For the polynomial model, 
 - c1 and d1 (curvature coefficients): here low negative c1 shows increase of BP with age with slight curvature as it gradually increases with age and negative d1 shows similar increase and then decrease later. The increase and decrease are gradual and curve is concave
 - c2 and d2 (linear coefficients) reflect the linear change of slope with age and are postive here showing the postive change in BP initially
@@ -77,7 +77,7 @@ For the sigmoidal-Gaussian model
 – Dmax reflects the maximum Diastolic Blood Pressure around middle age.This is the BBP one has around mid life around 55 years of age after which it starts decreases 
 – apeak reflects the age of peak DBP which would be at Dmax.This is the age where DBP is maximum after which it wouls start decreasing
 – σ reflects the how the distribution of DBP is across the ages. If this value is large here 85.573570 years it would signify slow increase and decrease in the DBP
-iii. Discuss limitations in capturing demographic nuances.
+- iii. Discuss limitations in capturing demographic nuances.
 - Here in the Gaussian model a0 parameter is getting pushed towards high negative value. More parameters seem to be required for a more accurate fit.
 - Here I used class marks of the age brackets which reduces the nuances of the values in teh distributions
 - The functions are not fully generalizable
@@ -102,10 +102,23 @@ ii:
 | **ROC AUC**          | 0.62262                          | 0.61276                          |
 | **Confusion Matrix** | [[5885, 4193],<br> [4072, 5850]] | [[5758, 4242],<br> [4141, 5859]] |
 
-Here only a marginal drop in performance (in all metrics) was noted. Further  
+Here only a marginal drop in performance (in all metrics) was noted. Further on different Male: Female ratios (0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9) were tested (Results in the following table). The strategy followed here was that to keep the test set unchanged to prevent data leakge and just subsampling the train dataset with different ratios for M:F. Also we used stratification while the initial split the test set is balanced so we can note the change in performance when training set is skewed
 
-- 
+|   Male-Female Ratio |   Accuracy |   F1 score |     AUC |
+|--------------------:|-----------:|-----------:|--------:|
+|                 0.1 |    0.5     | 0          | 0.5     |
+|                 0.2 |    0.50005 | 0.00039988 | 0.50005 |
+|                 0.3 |    0.50645 | 0.0476604  | 0.50645 |
+|                 0.4 |    0.5485  | 0.319107   | 0.5485  |
+|                 0.5 |    0.58275 | 0.585012   | 0.58275 |
+|                 0.6 |    0.5542  | 0.665441   | 0.5542  |
+|                 0.7 |    0.5131  | 0.670368   | 0.5131  |
+|                 0.8 |    0.50045 | 0.666867   | 0.50045 |
+|                 0.9 |    0.5     | 0.666667   | 0.5     |
 
+- The line graph ([]) showcases that at ratios closer to 0.1 ie where males less represented the F1 score is very low. Accuracy and AUC are also around chance or 0.5. However as the data balances out ie ratio closer to F1 score starts increasing and so do Accuracy and AUC after 0.3 upto 0.5 after which they both drop. The F1 score seems to keep increasing ever after that (that seems to showcase increase in confident false positives). The major potential bias is that model only trains to recognize one sex over the other. So while its performance to identify once sex might be high it isnt generalizable. Here it is just sex identification however in cases where other clinical endpoints are being looked at, model might only be able to perform well for one sex which was prevalent in the training set
+### iii
+-Balanced datasets are extremeley important
 
 
 # References and further reading:
