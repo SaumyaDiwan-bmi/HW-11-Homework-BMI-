@@ -8,7 +8,7 @@ Model Based Machine Learning
 
 All codes for the assignment can be found here ([https://github.com/SaumyaDiwan-bmi/HW-11-Homework-BMI-/blob/main/BMI_Week_11_notebook_Saumya_Diwan_final.ipynb])
 
-# Key Insights
+# Summary
 ## A 
 ### i
 For Systolic Blood Pressures SBP, Polynomial Regression Models and Sigmoid models were initiated. Similarly for Diastolic Blood Pressures DBP, Polynomical Polynomial Regression Models and Gaussian models. All modelling and analysis was performed in Python3
@@ -66,10 +66,10 @@ The Coefficient Values are displayed in the Table below for the polynomial, sigm
 
 ### v 
 Discussion and Analysis 
-i. Which model captures age trends in SBP and DBP better? 
+#### i. Which model captures age trends in SBP and DBP better? 
 For SBP, both Polynomial and Sigmoid models perform extremely well MSE = 0.065030,0.065419 , and R^2 = 0.998764,0.998757 respectively. The polynomical model performing seems to perform slightly better. Physiologcially sigmoid makes more sense as it shows slight curvature and which leads to a plateau, which is what is noted in SBP trends where it intially increases but stabilizes in adults. For DBP, both Polynomial and Gaussian models perform extremely well MSE = 0.897586,0.800747 , and R^2 = 0.926137,0.934106 respectively. The Gaussian model performing seems to perform better. This shows that a gaussian distribution suits DBP trends more where it first increases till around around the 55 years of age and then decrease after as one ages further
 
-- ii. How do model parameters reflect physiological blood pressure changes with age?
+#### ii. How do model parameters reflect physiological blood pressure changes with age?
 - Physiological Interpretation of Model Parameters: 
 - For the polynomial model, 
 - c1 and d1 (curvature coefficients): here low negative c1 shows increase of BP with age with slight curvature as it gradually increases with age and negative d1 shows similar increase and then decrease later. The increase and decrease are gradual and curve is concave
@@ -81,7 +81,7 @@ For the sigmoidal-Gaussian model
 – Dmax reflects the maximum Diastolic Blood Pressure around middle age.This is the BBP one has around mid life around 55 years of age after which it starts decreases 
 – apeak reflects the age of peak DBP which would be at Dmax.This is the age where DBP is maximum after which it wouls start decreasing
 – σ reflects the how the distribution of DBP is across the ages. If this value is large here 85.573570 years it would signify slow increase and decrease in the DBP
-- iii. Discuss limitations in capturing demographic nuances.
+#### iii. Discuss limitations in capturing demographic nuances.
 - Here in the Gaussian model a0 parameter is getting pushed towards high negative value. More parameters seem to be required for a more accurate fit.
 - Here I used class marks of the age brackets which reduces the nuances of the values in teh distributions
 - The functions are not fully generalizable
