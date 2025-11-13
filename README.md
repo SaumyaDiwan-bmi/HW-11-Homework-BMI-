@@ -4,7 +4,10 @@ Model Based Machine Learning
 - Email: saumya.diwan@emory.edu
 - Question Number 3: Model-based Bias Removal in Machine Learning using Synthetic Blood Pressure Data
 
-**Disclaimer:** **ChatGPT 5.1** was used to complete **HW3 [A ii]** to identify the library and function used for general curve fitting, its syntax, generating initial parameter estimates, and checking convergence and in **HW 3 [Bi]** to outline the steps used to generate data when given the mean, standard deviation, and correlation of variables and in **HW 3 [Bii.ii]** to generate an ROC curve with inset (since originally plots were unclear as they got superimposed due to similar performance) and line graph for performance drop accross different MF ratios It was further used to convert some results to tables in Markdown Format here
+**Disclaimer:** **ChatGPT 5.1** was used to complete **HW3 [A ii]** to identify the library and function used for general curve fitting, its syntax, generating initial parameter estimates, and checking convergence and in **HW 3 [Bi]** to outline the steps used to generate data when given the mean, standard deviation, and correlation of variables and in **HW 3 [Bii.ii]** to generate an ROC curve with inset (since originally plots were unclear as they got superimposed due to similar performance) and line graph for performance drop accross different MF ratios It was further used to convert some results to tables in Markdown Format here. PDFs can be found here: 
+1. ([https://github.com/SaumyaDiwan-bmi/HW-11-Homework-BMI-/blob/main/Problem3A_AI_TOOL_USAGE.pdf])
+2. ([https://github.com/SaumyaDiwan-bmi/HW-11-Homework-BMI-/blob/main/Problem3B_AI_TOOL_USAGE.pdf])
+3. ([https://github.com/SaumyaDiwan-bmi/HW-11-Homework-BMI-/blob/main/Problem3Bplotting_AI_TOOL_USAGE.pdf])
 
 All codes for the assignment can be found here ([https://github.com/SaumyaDiwan-bmi/HW-11-Homework-BMI-/blob/main/BMI_Week_11_notebook_Saumya_Diwan_final.ipynb])
 
