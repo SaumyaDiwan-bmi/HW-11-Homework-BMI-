@@ -10,6 +10,8 @@ All codes for the assignment can be found here ([https://github.com/SaumyaDiwan-
 
 # Key Insights
 ## A 
+### i
+For Systolic Blood Pressures SBP, Polynomial Regression Models and Sigmoid models were initiated. Similarly for Diastolic Blood Pressures DBP, Polynomical Polynomial Regression Models and Gaussian models. All modelling and analysis was performed in Python3
 ### ii 
 Data from the reference preprint ([https://arxiv.org/pdf/2402.01598]) was taken class marks for the Age brackets were generated in a separate column (Age_class_mark))
 | Age   | Number    | %    | mean_SBP | std_SBP | mean_DBP | std_DBP | rho_SBP_DBP | Age_class_mark |
