@@ -33,16 +33,16 @@ Quantitative Evaluation of Model Fit: The Mean Squared Error (MSE) and R-squared
 | Gaussian DBP   | 0.800747 | 0.934106 |
 ### iv
 Interpretation of Model Parameters: 
-For the polynomial model, 
--c1 and d1 (curvature coefficients) reflect the rate of change of slope with age (Physical dimension:mmHg/year^2). Both neagtive with 
--c2 and d2 (linear coefficients) reflect the linear change of slope with age (Physical dimension:mmHg/year)
--c3 and d3 (intercept terms) reflect the baseline BP at age = 0 (Physical dimension:mmHg) 
+- For the polynomial model,
+- - c1 and d1 (curvature coefficients) reflects the rate of change of slope with age (Physical dimension:mmHg/year^2) 
+- c2 and d2 (linear coefficients) reflect the linear change of slope with age (Physical dimension:mmHg/year)
+- c3 and d3 (intercept terms) reflect the baseline BP at age = 0 (Physical dimension:mmHg) 
 For the sigmoidal-Gaussian model
-–Smax reflects the Maximum Systolic Blood Pressure which would be the upper plateau (Physical dimension:mmHg/year^2)
-–a0: reflects the age at which SBP reaches half-maximum.(Physical dimension: year)
-–Dmax reflects the maximum Diastolic Blood Pressure around middle age.(Physical dimension:mmHg)
-–apeak reflects the age of peak DBP.(Physical dimension: year)
-–σ reflects the spread of the Gaussian curve for DBP.(Physical dimension:year)
+– Smax reflects the Maximum Systolic Blood Pressure which would be the upper plateau (Physical dimension:mmHg)
+– a0: reflects the age at which SBP reaches half-maximum which would be Smax/2.(Physical dimension: year)
+– Dmax reflects the maximum Diastolic Blood Pressure around middle age.(Physical dimension:mmHg)
+– apeak reflects the age of peak DBP which would be at Dmax.(Physical dimension: year)
+– σ reflects the spread of the Gaussian curve for DBP.(Physical dimension:year)
 The Coefficient Values are displayed in the Table below for the polynomial, sigmoid and gaussian model functions. 
 
 | Coefficient | Value      |
@@ -63,8 +63,26 @@ The Coefficient Values are displayed in the Table below for the polynomial, sigm
 ### v 
 Discussion and Analysis 
 i. Which model captures age trends in SBP and DBP better? 
+For SBP, both Polynomial and Sigmoid models perform extremely well MSE = 0.065030,0.065419 , and R^2 = 0.998764,0.998757 respectively. The polynomical model performing seems to perform slightly better. Physiologcially sigmoid makes more sense as it shows slight curvature and which leads to a plateau, which is what is noted in SBP trends where it intially increases but stabilizes in adults. For DBP, both Polynomial and Gaussian models perform extremely well MSE = 0.897586,0.800747 , and R^2 = 0.926137,0.934106 respectively. The Gaussian model performing seems to perform better. This shows that a gaussian distribution suits DBP trends more where it first increases till around around the 55 years of age and then decrease after as one ages further
+
 ii. How do model parameters reflect physiological blood pressure changes with age?
+Physiological Interpretation of Model Parameters: 
+- For the polynomial model, 
+- c1 and d1 (curvature coefficients): here low negative c1 shows increase of BP with age with slight curvature as it gradually increases with age and negative d1 shows similar increase and then decrease later. The increase and decrease are gradual and curve is concave
+- c2 and d2 (linear coefficients) reflect the linear change of slope with age and are postive here showing the postive change in BP initially
+- c3 and d3 (intercept terms) reflect the baseline BP at age = 0. These seem to be extrapolated backward values. However might not be the best estimate 
+For the sigmoidal-Gaussian model
+– Smax reflects the Maximum Systolic Blood Pressure which would be the upper plateau. This is the SBP (Here 148.910538 mmHg) one has around mid life around 55 years of age after which it plateaus
+– a0: reflects the age at which SBP reaches half-maximum which would be Smax/2. After this the increase would slow down and move towards plateauing 
+– Dmax reflects the maximum Diastolic Blood Pressure around middle age.This is the BBP one has around mid life around 55 years of age after which it starts decreases 
+– apeak reflects the age of peak DBP which would be at Dmax.This is the age where DBP is maximum after which it wouls start decreasing
+– σ reflects the how the distribution of DBP is across the ages. If this value is large here 85.573570 years it would signify slow increase and decrease in the DBP
 iii. Discuss limitations in capturing demographic nuances.
+- Here in the Gaussian model a0 parameter is getting pushed towards high negative value. More parameters seem to be required for a more accurate fit.
+- Here I used class marks of the age brackets which reduces the nuances of the values in teh distributions
+- The functions are not fully generalizable
+- No subgroup analysis has been performed to capture nuances based on sex, race, ethnicity, BMI, comorbidities as well as external exposure factors
+
 
 
 ## B
