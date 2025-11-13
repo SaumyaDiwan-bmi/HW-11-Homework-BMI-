@@ -4,7 +4,7 @@ Model Based Machine Learning
 - Email: saumya.diwan@emory.edu
 - Question Number 3: Model-based Bias Removal in Machine Learning using Synthetic Blood Pressure Data
 
-**Disclaimer:** **ChatGPT 5.1** was used to complete **HW3 [A ii]** to identify the library and function used for general curve fitting, its syntax, generating initial parameter estimates, and checking convergence and in **HW 3 [Bi]** to outline the steps used to generate data when given the mean, standard deviation, and correlation of variables. It was further used to convert results to tables in Markdown Format here
+**Disclaimer:** **ChatGPT 5.1** was used to complete **HW3 [A ii]** to identify the library and function used for general curve fitting, its syntax, generating initial parameter estimates, and checking convergence and in **HW 3 [Bi]** to outline the steps used to generate data when given the mean, standard deviation, and correlation of variables and in **HW 3 [Bii.ii]** to generate an ROC curve with inset (since originally plots were unclear as they got superimposed due to similar performance) and line graph for performance drop accross different MF ratios It was further used to convert some results to tables in Markdown Format here
 
 # Key Insights
 ## A 
@@ -102,7 +102,7 @@ ii:
 | **ROC AUC**          | 0.62262                          | 0.61276                          |
 | **Confusion Matrix** | [[5885, 4193],<br> [4072, 5850]] | [[5758, 4242],<br> [4141, 5859]] |
 
-Here only a marginal drop in performance (in all metrics) was noted. Further on different Male: Female ratios (0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9) were tested (Results in the following table). The strategy followed here was that to keep the test set unchanged to prevent data leakge and just subsampling the train dataset with different ratios for M:F. Also we used stratification while the initial split the test set is balanced so we can note the change in performance when training set is skewed
+Here only a marginal drop in performance (in all metrics) was noted. Further on different Male: Female ratios (0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9) were tested (Results in the following table). The strategy followed here was that to keep the test set unchanged to prevent data leakge and just subsampling the train dataset with different ratios for M:F. Also we used stratification while the initial split the test set is balanced so we can note the change in performance when training set is skewed. The ROC curves can be found here ([https://github.com/SaumyaDiwan-bmi/HW-11-Homework-BMI-/blob/main/ROC%20Curves%20for%20different%20ratios.png]). 
 
 |   Male-Female Ratio |   Accuracy |   F1 score |     AUC |
 |--------------------:|-----------:|-----------:|--------:|
@@ -116,7 +116,7 @@ Here only a marginal drop in performance (in all metrics) was noted. Further on 
 |                 0.8 |    0.50045 | 0.666867   | 0.50045 |
 |                 0.9 |    0.5     | 0.666667   | 0.5     |
 
-- The line graph ([]) showcases that at ratios closer to 0.1 ie where males less represented the F1 score is very low. Accuracy and AUC are also around chance or 0.5. However as the data balances out ie ratio closer to F1 score starts increasing and so do Accuracy and AUC after 0.3 upto 0.5 after which they both drop. The F1 score seems to keep increasing ever after that (that seems to showcase increase in confident false positives). The major potential bias is that model only trains to recognize one sex over the other. So while its performance to identify once sex might be high it isnt generalizable. Here it is just sex identification however in cases where other clinical endpoints are being looked at, model might only be able to perform well for one sex which was prevalent in the training set
+- The line graph ([https://github.com/SaumyaDiwan-bmi/HW-11-Homework-BMI-/blob/main/Performance%20drift%20with%20differetn%20MF%20ratios.png]) showcases that at ratios closer to 0.1 ie where males less represented the F1 score is very low. Accuracy and AUC are also around chance or 0.5. However as the data balances out ie ratio closer to F1 score starts increasing and so do Accuracy and AUC after 0.3 upto 0.5 after which they both drop. The F1 score seems to keep increasing ever after that (that seems to showcase increase in confident false positives). The major potential bias is that model only trains to recognize one sex over the other. So while its performance to identify once sex might be high it isnt generalizable. Here it is just sex identification however in cases where other clinical endpoints are being looked at, model might only be able to perform well for one sex which was prevalent in the training set
 ### iii
 -Balanced datasets are extremeley important
 
