@@ -120,6 +120,20 @@ Here only a marginal drop in performance (in all metrics) was noted. Further on 
 ### iii
 -Balanced datasets are extremeley important
 
+### iv
+-Added in bias mitigation by using class weight as balanced in the model so that the model doesnt get influenced by the prevalence of one sex over the other. This was chosen as it allows the model to optimize for bias by assigning weights to the under represented class. It stabilizes the model performance in skewed datasets. It also improved the AUC, Accuracy and F1 score significantly here (table below shows results over differnt ratios). The line graph here ([https://github.com/SaumyaDiwan-bmi/HW-11-Homework-BMI-/blob/main/Performance%20drift%20with%20differetn%20MF%20ratios%20after%20bias%20mitigation.png]) shows much less drift in metrics over the ratios while the ROC curve shows similar trend as before with improved AUC ([https://github.com/SaumyaDiwan-bmi/HW-11-Homework-BMI-/blob/main/ROC%20Curves%20for%20different%20ratios%20after%20bias%20mitigation.png])
+|   Male-Female Ratio |   Accuracy |   F1 score |     AUC |
+|--------------------:|-----------:|-----------:|--------:|
+|                 0.1 |    0.582   |   0.583665 | 0.582   |
+|                 0.2 |    0.5827  |   0.585683 | 0.5827  |
+|                 0.3 |    0.58255 |   0.585102 | 0.58255 |
+|                 0.4 |    0.58255 |   0.584771 | 0.58255 |
+|                 0.5 |    0.58275 |   0.585012 | 0.58275 |
+|                 0.6 |    0.58265 |   0.584912 | 0.58265 |
+|                 0.7 |    0.5828  |   0.585329 | 0.5828  |
+|                 0.8 |    0.58215 |   0.585034 | 0.58215 |
+|                 0.9 |    0.58255 |   0.584854 | 0.58255 |
+
 
 # References and further reading:
 1. https://arxiv.org/pdf/2306.08451.pdf
